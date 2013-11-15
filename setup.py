@@ -10,13 +10,19 @@ http://code.google.com/p/sqlany-django/
 ----------------------------------------------------------------"""
 
 from setuptools import setup, find_packages
+import os,re
+
+with open( os.path.join( os.path.dirname(__file__), 'sqlany_django',
+                              '__init__.py' ) ) as v:
+    VERSION = re.compile(r".*__version__ = '(.*?)'", re.S).match(v.read()).group(1)
 
 setup(name='sqlany_django',
-      version='1.4',
+      version=VERSION,
       description='SQL Anywhere database backend for Django',
       long_description=open('README.rst').read(),
       author='Graeme Perrow',
       author_email='graeme.perrow@sap.com',
+      install_requires=['sqlanydb >= 1.0.4'],
       url='http://code.google.com/p/sqlany-django',
       packages = find_packages(),
       license='New BSD',

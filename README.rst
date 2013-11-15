@@ -52,29 +52,40 @@ file name "LICENSE" included with this package for more information.
     
     (e) Python SQL Anywhere Database Interface
     
+       If you are using pip to install the SQL Anywhere Django driver, you can
+       skip this step since the SQL Anywhere Python driver will be installed
+       as part of that step.
+
        The SQL Anywhere Database Interface for Python provides a Database API v2
        compliant driver (see Python PEP 249) for accessing SQL Anywhere
        databases from Python. The SQL Anywhere backend for Django is built on
        top of this interface so installing it is required.
     
-       You can obtain the Python SQL Anywhere Database Interface from
-       http://code.google.com/p/sqlanydb/.
-    
-       Install the driver by extracting the archive and running the following
-       command in the resulting directory::
+       You can use pip to make this easy::
+
+           pip install sqlanydb
+
+       Alternatively, you can obtain the Python SQL Anywhere Database Interface 
+       from http://code.google.com/p/sqlanydb/. Install the driver by downloading
+       the source and running the following command::
     
            $ python setup.py install
-    
+
     (f) SQL Anywhere Django Backend
     
-       You can obtain the SQL Anywhere Database backend for Django from
-       http://code.google.com/p/sqlany-django/.
-    
-       Install the backend by extracting the archive and running the following
-       command in the resulting directory::
+        Again, use pip to install this easily::
+
+           pip install sqlany-django
+
+	This will install the SQL Anywhere python driver if it was not already
+	installed.
+
+        Or you can obtain the SQL Anywhere Database backend for Django from
+        http://code.google.com/p/sqlany-django/. Install the backend by downloading
+        the source and running the following command::
     
            $ python setup.py install
-    
+
 #. Setup your environment
 
     (Linux/Unix/Mac OS X only)
